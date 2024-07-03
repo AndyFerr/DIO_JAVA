@@ -2,6 +2,8 @@ package Fundamentos.Exemples.Interface;
 
 
 import Fundamentos.Exemples.Interface.Equipamentos.EquipamentoMultifuncional;
+import Fundamentos.Exemples.Interface.Interfaces.Copiadora;
+import Fundamentos.Exemples.Interface.Interfaces.Digitalzadora;
 import Fundamentos.Exemples.Interface.Interfaces.Impressora;
 
 public class Fabrica {

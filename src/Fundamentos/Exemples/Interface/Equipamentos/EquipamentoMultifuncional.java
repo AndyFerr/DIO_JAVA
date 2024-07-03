@@ -1,5 +1,7 @@
 package Fundamentos.Exemples.Interface.Equipamentos;
 
+import Fundamentos.Exemples.Interface.Interfaces.Copiadora;
+import Fundamentos.Exemples.Interface.Interfaces.Digitalzadora;
 import Fundamentos.Exemples.Interface.Interfaces.Impressora;
 
 public class EquipamentoMultifuncional implements Impressora, Copiadora, Digitalzadora {
