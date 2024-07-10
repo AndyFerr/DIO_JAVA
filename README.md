@@ -77,6 +77,43 @@ _É usado em variáveis de abstract, não classes normais_
       * post-site
       * site-deploy
 
+### JUnit
+**Asserts**
+
+_Para comparar números inteiros_
+
+````Assertions.assertEquals()````
+
+_Verificações Booleanas_
+
+````Assertions.assertTrue()````
+````Assertions.assertFalse()````
+
+_Comparação de Arrays_
+
+````Assertion.assertArrayEquals()````
+
+_Throws exception_
+
+````Assertions.assertTrows(<Exception>.class, () -> <chamar a função para verificar se ocorre a exception>)````
+
+
+
+**Boas práticas**
+
+* Primeiro você faz o teste e depois faz o código
+* Crie um código inicial de forma que ele de errado para a partir daí seguir os 3 passos da TDD
+* Faça o código retornar o valor certo com a menor quantidade de linhas possíveis
+* Refatore o código, arrume
+* Os testes devem ser o mais simples possóvel para que todos entendam a documentação do código
+* Quando o teste passa sem que você tenha escrito o código especificamente para ele, suspeite
+
+
+**@**
+
+* @TestMethodOrder(MethodOrder.OrderAnnotation.class)
+  * @Order()
+
 
 
 ### ✨ Extras
