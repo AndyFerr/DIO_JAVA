@@ -5,6 +5,8 @@
 ### 📚Material de apoio para Java
 - [Java básico](https://glysns.gitbook.io/java-basico/sintaxe/variaveis).
 - [Java DOC](https://web.dio.me/course/aprendendo-a-sintaxe-java/learning/22291e9a-f214-4429-9701-3c6e050e2e19?back=/track/santander-2024-backend-com-java&tab=undefined&moduleId=undefined)
+- [Springboot](https://github.com/digitalinnovationone/dio-springboot)
+
 
 
 ### Propriedades
@@ -114,6 +116,61 @@ _Throws exception_
 * @TestMethodOrder(MethodOrder.OrderAnnotation.class)
   * @Order()
 
+### 🍃 Spring (boot) Framework
+
+**Slides**
+- [Slide Gleyson Sampaio](https://docs.google.com/presentation/d/1jS5Ov8UCSnzgW3TLBcAsGrXo__kL6FOG/edit#slide=id.p1)
+
+**Fundamentos**
+- Para utilizar as classes como Beans (Objetos administrados por um container do spring) é necessário implementar a interface "CommandLineRunner"
+ 
+![Minha imagem](imagens/springboot-criacao-beans.png)
+
+- Quando um componente precisar utilizar outro componente é necessário fazer a injeção de dependência: ````@Autowired````
+
+- ````@Component```` é utilizado quando se tem acesso ao código; ```@Beans``` é utilizado para classes externas, e pe recomendado utilizar uma classe para fazer a injeção:
+  ![Minha imagem](imagens/beans.png)
+
+  ![Minha imagem](imagens/sla.png)
+
+
+- O ````@Values```` é utilizado para se atribuir valores de forma não declarativa no escopo, utilizando a pasta "aplications.properties":
+![Minha](imagens/aplication-propeties.png)
+
+
+- É possível criar-se uma classe com os atributos que se quer usar com as atribuições no "aplications.properties"
+  ![Minha](imagens/configurationProperties.png)
+  ![Minha](imagens/aplications-properties.png)
+
+## Spring web
+- ````@RestController````: Responsável por designar o bean de compoment que suporta requisições HTTP com base na arquitetura REST
+- ````@RequestMapping````(*"prefix"*): Determina qual a URI comum para todos os recursos disponibilizados pelo Controller
+- ````@GetMapping````: Determina que o método receberá requisições **HTTP** do tipo **GET**
+- ````@PostMapping````: Determina que o método receberá requisições **HTTP** do tipo **POST**
+- ````@PutMapping````: Determina que o método receberá requisições **HTTP** do tipo **PUT**
+- ````@DeleteMapping````: Determina que o método receberá requisições **HTTP** do tipo **DELETE**
+- ````@RequestBody````: Converte um **JSON** para o tipo de objeto esperado como parâmetro no método
+- ````PathVariable````: Consegue determinar que parte da URI será composta por parâmetros recebidos na requisição
+
+
+## Spring Security
+- Permite criar uma tela de autenticação de login
+- Você pode definir usuário e senha padrão no aplications.properties com a notação:
+
+
+  * ````@spring.security.user.name=<nome de usuário>````
+  * ````@spring.security.user.password=<senha>````
+  * ````@spring.security.user.roles=<caminho de acesso na URL (geralmente em caps)>````
+
+
+- Ou você pode criar um classe a parte e fazer as confirguraçõs de múltiplos usuários:
+![minha imagemn](imagens/spring-security-users.png)
+
+  
+- Para filtrar o acesso de determinados usuários é possível se fazer a pré autenticação a partir dos ROLES de cada usuários:
+
+![minha imagem](imagens/spring-autenticacao-roles.png)
+
 
 
 ### ✨ Extras
@@ -144,4 +201,26 @@ if (a||b){System.out.println("Pelo menos um é true")}
 **Material de apoio sobre MongoDB**
 - [Site MongoDB](https://www.mongodb.com/blog/post/building-with-patterns-a-summary)
 - [Agregation - MongoDB manual](https://www.mongodb.com/blog/post/building-with-patterns-a-summary)
+
+
+**ORM (Object-Relational-Mapping)**
+- É uma forma de fazer o mapeamento dos objetos para uma tabela a partir de uma biblioteca ou framework 
+- Utilizado para fazer integração com um banco de dados
+ 
+**JPA**
+- Uma especificação baseada em interfaces, que através de um framework realiza operações de persistência de objetos em java
+- Principais imlementações:
+  * Hibernate
+  * EclipseLink
+  * Oracle TOPLINK
+  * Open JPA
+
+![Minha](imagens/mapeamento-classes.png)
+
+**Exemplo de projeto com Sprimg Data JPA:**
+[Spring Data JPA](https://github.com/digitalinnovationone/dio-springboot/tree/main/dio-spring-data-jpa)
+
+
+
+
 
